@@ -1,0 +1,167 @@
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #f9c5d1, #f9e7f3);
+  color: #5a3a5a;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  position: relative;
+  margin-top: 10%;
+  z-index: 2;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  display: inline-block;
+  max-width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  animation: fadeIn 3s ease-in-out;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  animation: slideIn 3s ease-in-out;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.butterfly {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  animation: float 5s infinite ease-in-out;
+  z-index: 3;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -55%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  75% {
+    transform: translate(-50%, -45%) rotate(-5deg);
+  }
+}
+
+.balloon,
+.star {
+  position: absolute;
+  bottom: -100px;
+  font-size: 2rem;
+  animation: floatUp 8s infinite ease-in;
+}
+
+.balloon {
+  font-size: 3rem;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-100vh) rotate(360deg);
+  }
+  100% {
+    transform: translateY(-200vh) rotate(720deg);
+  }
+}
+
+.random-photo-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.random-photo-button:hover {
+  background: #ff4a3d;
+  transform: scale(1.1);
+}
+
+.random-photo {
+  margin-top: 20px;
+  display: none;
+}
+
+.random-photo img {
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.random-photo img.active {
+  display: block;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cake-cutting {
+  display: none;
+  margin-top: 20px;
+}
+
+.cake-cutting img {
+  width: 300px;
+  height: 300px;
+  animation: cutCake 2s ease-in-out;
+}
+
+@keyframes cutCake {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
