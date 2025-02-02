@@ -5,7 +5,7 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 
@@ -19,6 +19,14 @@ body {
   display: inline-block;
   max-width: 80%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .container {
+    max-width: 95%; /* Make the container wider on mobile */
+    margin-top: 5%; /* Adjust top margin for better spacing */
+  }
 }
 
 h1 {
@@ -141,6 +149,20 @@ p {
 .random-photo img.active {
   display: block;
   animation: fadeIn 1s ease-in-out;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .random-photo img {
+    width: 100%; /* Make images take full width of the screen */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 300px; /* Limit maximum width for better readability */
+    margin: 0 auto; /* Center the images */
+  }
+
+  .random-photo {
+    padding: 10px; /* Add some padding for better spacing */
+  }
 }
 
 .cake-cutting {
