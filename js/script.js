@@ -69,7 +69,8 @@ randomPhotoButton.addEventListener("click", () => {
 
   // Disable the button after clicking
   randomPhotoButton.disabled = true;
-  randomPhotoButton.textContent = "Surprise Revealed! 🎉";
+  // randomPhotoButton.textContent = "Surprise Revealed! 🎉";
+  randomPhotoButton.textContent = "Btw Karela Jaroor milega tumhe! hehehe 🎉";
 });
 
 // music
