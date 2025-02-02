@@ -1,4 +1,13 @@
 // Confetti Effect
+
+window.onload = () => {
+  confetti({
+    particleCount: 300,
+    spread: 150,
+    origin: { y: 0.6 },
+  });
+};
+
 confetti({
   particleCount: 100,
   spread: 70,
@@ -61,4 +70,22 @@ randomPhotoButton.addEventListener("click", () => {
   // Disable the button after clicking
   randomPhotoButton.disabled = true;
   randomPhotoButton.textContent = "Surprise Revealed! 🎉";
+});
+
+// music
+document.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("background-music");
+
+  // Try playing the music
+  const playMusic = () => {
+    music.play().catch(() => {
+      console.log("Autoplay blocked. Playing after user interaction.");
+    });
+  };
+
+  // First try playing immediately
+  playMusic();
+
+  // If autoplay is blocked, play after first user interaction
+  document.body.addEventListener("click", playMusic, { once: true });
 });
